@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	*{
+	margin:0;
+	padding:0;
+	}
+	#main{
+	width:1000px;
+	height:800px;
+	background:gray;
+	margin:0 auto;
+	}
+	#header{
+	width:1000px;
+	height:100px;
+	background:pink;
+	}
+	#content{
+	width:1000px;
+	height:600px;
+	background:yellow;
+	}
+	#footer{
+	width:1000px;
+	height:100px;
+	background:green;
+	}
+	#reg{
+	background:aqua;
+	width:400px;
+	height:400px;
+	margin:0 auto;
+	list-style:none;
+	padding:30px;
+	box-sizing:border-box;
+	}
+	#reg li{
+	margin:10px;
+	}
+	#reg li input[type="text"],#reg li input[type="password"]{
+	width:300px;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px;
+	}
+	#reg li input[type="submit"]{
+	width:150px;
+	font-size:20px;
+	font-weight:18px;
+	padding:10px 12px;
+	background:red;
+	}
+	</style>
+	<script>
+	function vld(){
+		var un=document.getElementById("unm").value;
+		un=un.trim();
+		if(un==""){
+			alert("plz Enter name");
+			document.getElementById("unm").focus();
+			document.getElementById("unm")value="";
+			return false;
+		}
+		if(un.length<3 || un.length>20){
+			alert("Enter atleast 3 char Name");
+			document.getElementById("unm").focus();
+			return false;
+		}
+		var mb=document.
+	}
+	</script>
+</head>
+<body>
+	<div id="main">
+		<div id="header"></div>
+		<div id="content">
+			<form action="progress.php" method="get" onsubmit="return vld()">
+				<ul id="reg">
+					<li><input name="unm" id="unm" type="text" placeholder="Enter your name"></li>
+					<li><input name="mob" id="mob" type="text" placeholder="Enter your mob"></li>
+					<li><input name="eml" id="eml" type="text" placeholder="Enter your email id"></li>
+					<li><input name="pwd" id="pwd" type="password" placeholder="choose password"></li>
+					<li><input name="rpw" id="rpw" type="password" placeholder="retype password"></li>
+					<li><input name="sub" id="sub" type="submit"></li>
+				</ul>
+			</form>
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>
